@@ -37,7 +37,7 @@
 <hr>
 <br>
 
-```
+```CMake
 cmake_minimum_required(VERSION 3.27)
 project(CXXTEST)
 # CXX Properties ------------------------------------
