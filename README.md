@@ -17,6 +17,19 @@
     <li>main.cxx</li>
   </ul>
 </ul>
+<hr>
+<h2>To get option run 'All in CXXTEST_run' you need to do this</h2>
+<ul>
+  <li>In configuration bar click on 'More Actions'(it looks like three vertical dots)</li>
+  <li>Choose 'Edit...' in Configuration</li>
+  <li>Click on Google Test configuration</li>
+  <li>Click on 'Add new run configuration...'</li>
+  <ul>
+    <li>Alow multiple instances</li>
+    <li>Apply changes</li>
+  </ul>
+</ul>
+
 
 ```
 cmake_minimum_required(VERSION 3.27)
