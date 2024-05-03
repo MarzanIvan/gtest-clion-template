@@ -30,7 +30,11 @@
   </ul>
 </ul>
 
+<h2>Then you can see this configuration</h2>
+<img width="467" alt="Screenshot 2024-05-03 at 23 45 12" src="https://github.com/MarzanIvan/gtest-clion-template/assets/87321166/644a75b4-3dfd-433e-87d0-70521f6a37ee">
 
+
+<hr>
 ```
 cmake_minimum_required(VERSION 3.27)
 project(CXXTEST)
