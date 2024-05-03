@@ -8,14 +8,14 @@
 <span>structure of project:</span><br>
 <ul>
   <li>CXXTEST</li>
-  <li><ul>
+  <ul>
     <li>
       <span>lib</span>
     </li>
     <li>.gitignore</li>
     <li>CMakeLists.txt</li>
     <li>main.cxx</li>
-  </ul></li>
+  </ul>
 </ul>
 
 ```
