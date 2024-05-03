@@ -10,7 +10,7 @@
   <li>CXXTEST</li>
   <ul>
     <li>
-      <span>lib</span>
+      <span>lib - content of zip file from https://github.com/google/googletest/releases</span>
     </li>
     <li>.gitignore</li>
     <li>CMakeLists.txt</li>
