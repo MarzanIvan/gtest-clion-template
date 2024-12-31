@@ -1,4 +1,4 @@
-<h2>This is empty project to run gtest in Clion on 3 May 2024.</h2>
+<h2>This is empty project to run gtest in Clion</h2>
 <hr>
 <span>Target of this project to faster create gtests in projects by cloning this repo</span>
 <hr>
