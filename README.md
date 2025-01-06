@@ -1,4 +1,5 @@
 <h2>This is empty project to run gtest in Clion</h2>
+<h3>Support CI/CD(github workflow)</h3>
 <hr>
 <span>Target of this project to faster create gtests in projects by cloning this repo</span>
 <hr>
