@@ -1,16 +1,32 @@
-cmake_minimum_required(VERSION 3.27)
-project(CXXTEST)
-# CXX Properties ------------------------------------
-set(CMAKE_CXX_STANDARD 14)
-# set this flag when running coverage tests in Clion
-set(CMAKE_CXX_FLAGS "--coverage")
-# generate debug information
-set(CMAKE_CXX_FLAGS "-g")
-#----------------------------------------------------
+set(PROJECT_NAME GTestExample)
+set(header_path "${${PROJECT_NAME}_SOURCE_DIR}/include/${PROJECT_NAME}")
+set(header ${header_path}/${PROJECT_NAME}.h)
+set(src ${PROJECT_NAME}.cpp)
 
-add_subdirectory(lib)
-add_executable(${CMAKE_PROJECT_NAME}_run main.cxx)
-# to link source files and include google test include/ folder to search the files
-include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-# files to link with each other
-target_link_libraries(${CMAKE_PROJECT_NAME}_run gtest gtest_main)
+
+add_library(${PROJECT_NAME} SHARED
+        ${header}
+        ${src})
+target_include_directories(${PROJECT_NAME}
+        PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
+        ${${PROJECT_NAME}_SOURCE_DIR}/include)
+target_link_libraries(${PROJECT_NAME}
+        pthread)
+
+
+add_executable(${PROJECT_NAME}.info info.cpp)
+target_include_directories(${PROJECT_NAME}.info
+        PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
+        ${${PROJECT_NAME}_SOURCE_DIR}/include)
+target_link_libraries(${PROJECT_NAME}.info
+        ${PROJECT_NAME})
+
+
+install(TARGETS ${PROJECT_NAME}
+        LIBRARY DESTINATION "${lib_dest}"
+        ARCHIVE DESTINATION "${lib_dest}"
+        COMPONENT library)
+install(TARGETS ${PROJECT_NAME}.info
+        RUNTIME DESTINATION "${tool_dest}"
+        COMPONENT library)
+install(FILES ${header} DESTINATION "${include_dest}")
